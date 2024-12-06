@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-
 import {REGULAR_COLORS, VEG_COLORS } from '@/constants/constant';
 import { MenuItem } from "./MenuItem";
 

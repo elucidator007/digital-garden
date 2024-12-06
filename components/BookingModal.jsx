@@ -9,6 +9,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { AlertCircle } from 'lucide-react';
+import BookingModalLoading from './BookingModal-loading';
+import BookingModalCompleted from './BookingModal-completed';
 
 const BookingModal = ({ open, onOpenChange }) => {
   const [formData, setFormData] = useState({
@@ -129,7 +131,7 @@ const BookingModal = ({ open, onOpenChange }) => {
     setBookingStatus('processing');
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 5000));
     setBookingStatus('completed');
     
     // Reset after showing completion
@@ -153,73 +155,12 @@ const BookingModal = ({ open, onOpenChange }) => {
     switch (bookingStatus) {
       case 'processing':
         return (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="text-center py-12 px-6"
-          >
-            <div className="mb-8">
-              <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#461111] border-t-transparent mx-auto"></div>
-            </div>
-            <motion.h3 
-              className="text-2xl font-light mb-3" 
-              style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              Hello {formData.name}
-            </motion.h3>
-            <motion.p 
-              className="text-gray-600"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              Your booking is being processed...
-            </motion.p>
-          </motion.div>
+          <BookingModalLoading formData={formData}/>
         );
 
       case 'completed':
         return (
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="text-center py-12 px-6"
-          >
-            <motion.div 
-              className="mb-8"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
-            >
-              <div className="w-16 h-16 bg-[#461111] rounded-full mx-auto flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-            </motion.div>
-            <motion.h3 
-              className="text-2xl font-light mb-3" 
-              style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              Booking Completed!
-            </motion.h3>
-            <motion.p 
-              className="text-gray-600"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-            >
-              We look forward to serving you, {formData.name}
-            </motion.p>
-          </motion.div>
+          <BookingModalCompleted formData={formData}/>
         );
 
       default:
@@ -335,13 +276,13 @@ const BookingModal = ({ open, onOpenChange }) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px] p-0">
+      <DialogContent className="sm:max-w-[425px] p-0 rounded-md">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="bg-[#E4C59E]"
+          className="bg-[#E4C59E] rounded-md"
         >
           <DialogHeader className="p-6 pb-0">
             <DialogTitle 

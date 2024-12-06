@@ -2,34 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const slides = [
-  {
-    image: 'https://images.unsplash.com/photo-1480548004877-593316be2bd5?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Ancient Origins',
-    description: 'Dating back to ancient civilizations, flatbreads with toppings were served in Naples, Italy. Poor workers needed quick, affordable meals, leading to the birth of pizza.'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1611588275568-72ecc1a502d1?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'The Perfect Dough',
-    description: 'Our master pizzaiolos hand-knead the dough using a centuries-old recipe. The dough rests for 24-48 hours, developing complex flavors and the perfect texture.'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1610913729746-9d5d752daf59?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Sauce Creation',
-    description: 'San Marzano tomatoes, grown in the volcanic soil near Mount Vesuvius, are crushed and seasoned with Mediterranean herbs to create our signature sauce.'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1609280797194-acf56a8b95aa?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Traditional Toppings',
-    description: 'Fresh mozzarella, hand-torn basil, and extra virgin olive oil - the colors of the Italian flag come together in our authentic Neapolitan pizza.'
-  },
-  {
-    image: 'https://images.unsplash.com/photo-1607018244619-dab6235709dd?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Wood-Fired Perfection',
-    description: 'Each pizza is cooked in our wood-fired oven at 900°F for exactly 90 seconds, creating the perfect leopard-spotted crust characteristic of true Neapolitan pizza.'
-  }
-];
+import { slides } from '@/constants/constant';
 
 const PizzaCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

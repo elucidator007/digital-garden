@@ -8,7 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { menuData, REGULAR_COLORS, VEG_COLORS } from '@/constants/constant';
+import { REGULAR_COLORS, VEG_COLORS } from '@/constants/constant';
 
 
 const FoodTypeIcon = ({ isVeg }) => (
