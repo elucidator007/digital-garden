@@ -1,7 +1,18 @@
+'use client'
+
 import React from 'react';
-import Lottie from 'lottie-react';
-import successAnimation from '../public/chef-menu-modal.json'; // You'll need to import your Lottie JSON file
+import successAnimation from '../public/chef-menu-modal.json';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-64 flex items-center justify-center">
+        <div className="text-gray-400">Loading...</div>
+      </div>
+    ),
+  });
 
 const BookingModalCompleted = ({formData}) => {
     return (

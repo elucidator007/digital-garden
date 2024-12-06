@@ -1,8 +1,19 @@
+'use client'
+
 import React from 'react';
-import Lottie from 'lottie-react';
 import loadingAnimation from '../public/pizza-loader.json';
 import { motion } from 'framer-motion';
 import { pizza_facts } from '@/constants/constant';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-64 flex items-center justify-center">
+        <div className="text-gray-400">Loading...</div>
+      </div>
+    ),
+  });
 
 const BookingModalLoading = ({formData}) => {
   

@@ -196,9 +196,9 @@ export const menuData = {
   export const VEG_COLORS = {
     background: '#C4DAD2',
     primary: '#16423C',
-    secondary: '#6A9C89',
+    secondary: '#16423C',
     accent: '#6A9C89',
-    border: '#C4DAD2'
+    border: '#16423C'
   };
 
   export const slides = [
