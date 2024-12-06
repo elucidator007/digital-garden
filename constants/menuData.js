@@ -39,7 +39,7 @@ export const menuData = {
         description: "San Marzano tomatoes, buffalo mozzarella, fresh basil, olive oil",
         price: "18.95",
         isVeg: true,
-        spicyLevel: 0,
+        spicyLevel: 1,
         ingredients: [
           "San Marzano tomatoes",
           "Buffalo mozzarella D.O.P",
