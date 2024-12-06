@@ -2,9 +2,15 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import loadingAnimation from '../public/pizza-loader.json';
 import { motion } from 'framer-motion';
+import { pizza_facts } from '@/constants/constant';
 
 const BookingModalLoading = ({formData}) => {
-  return (
+  
+    const getRandomItem = (arr) => {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+  
+    return (
     <motion.div 
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -33,7 +39,14 @@ const BookingModalLoading = ({formData}) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        Your booking is being processed...
+        <p>Your booking is being processed...</p>
+        <br/>
+        <div
+            style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
+        >
+            <div>Fun Fact:</div>
+            {getRandomItem(pizza_facts)}
+        </div>
       </motion.p>
     </motion.div>
   );

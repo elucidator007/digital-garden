@@ -229,3 +229,15 @@ export const menuData = {
     }
   ];
   
+  export const pizza_facts = [
+    "The world's first pizzeria, Port'Alba, opened in Naples in 1830 and is still operating today",
+    "The most expensive pizza ever created cost $12,000 and was topped with caviar, lobster, and rare cognac",
+    "Pizza margherita was created in 1889 to honor Queen Margherita of Italy using red tomatoes, white mozzarella, and green basil",
+    "Americans eat around 350 slices of pizza every second", 
+    "The Hawaiian pizza was actually invented in Canada by Sam Panopoulos in 1962",
+    "The U.S. military has developed a pizza that can stay fresh for up to three years",
+    "October is officially National Pizza Month in the United States",
+    "The largest pizza ever made was 13,580 square feet, created in Rome, Italy in 2012",
+    "Pizza was originally considered a food for poor people before becoming a worldwide phenomenon",
+    "The first known pizza delivery was to Queen Margherita in 1889 by Raffaele Esposito"
+ ]
