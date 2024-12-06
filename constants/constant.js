@@ -184,3 +184,19 @@ export const menuData = {
     secondary: "'Cormorant Garamond', serif",
     text: "'Montserrat', sans-serif"
   };
+
+  export const REGULAR_COLORS = {
+    background: '#E4C59E',
+    primary: '#040303',
+    secondary: '#461111',
+    accent: '#A13333',
+    border: '#B3541E'
+  };
+  
+  export const VEG_COLORS = {
+    background: '#C4DAD2',
+    primary: '#16423C',
+    secondary: '#6A9C89',
+    accent: '#6A9C89',
+    border: '#C4DAD2'
+  };
