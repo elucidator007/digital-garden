@@ -27,7 +27,7 @@ const Animation = () => {
         style={{ background: 'transparent' }}
       />
       {/* Decorative circle behind the animation */}
-      <div className="absolute inset-0 -m-4 bg-sky-400/10 rounded-full blur-md" />
+      <div className="absolute inset-0 -m-4 bg-[#A13333]/10 rounded-full blur-md" />
     </div>
   );
 };
@@ -67,10 +67,10 @@ const PizzeriaHome = () => {
         </div>
 
         {/* Right Side - Branding and Buttons */}
-        <div className="w-1/2 flex flex-col items-center justify-center bg-[#222831] px-8 py-16 md:py-24 relative overflow-hidden">
+        <div className="w-1/2 flex flex-col items-center justify-center bg-[#040303] px-8 py-16 md:py-24 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#A13333]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#B3541E]/5 rounded-full blur-3xl" />
           
           <motion.main 
             className="flex flex-col items-center gap-12 relative z-10 w-full max-w-xl"
@@ -86,9 +86,9 @@ const PizzeriaHome = () => {
               <h1 
                 className="text-6xl md:text-7xl font-bold tracking-tight"
                 style={{ 
-                  color: '#00ADB5',
+                  color: '#A13333',
                   fontFamily: "'Playfair Display', serif",
-                  textShadow: '0 2px 8px rgba(0, 173, 181, 0.2)'
+                  textShadow: '0 2px 8px rgba(161, 51, 51, 0.2)'
                 }}
               >
                 Pizzeria Paradiso
@@ -96,7 +96,7 @@ const PizzeriaHome = () => {
               <h2 
                 className="text-2xl md:text-3xl font-medium tracking-wide"
                 style={{ 
-                  color: '#EEEEEE',
+                  color: '#B3541E',
                   fontFamily: "'Cormorant Garamond', serif",
                   letterSpacing: '0.05em'
                 }}
@@ -111,24 +111,24 @@ const PizzeriaHome = () => {
             >
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="group w-full px-8 py-4 rounded-full text-lg transition-all duration-500 hover:shadow-2xl hover:shadow-sky-500/20 hover:translate-y-[-2px] relative overflow-hidden"
+                className="group w-full px-8 py-4 rounded-full text-lg transition-all duration-500 hover:shadow-2xl hover:shadow-[#A13333]/20 hover:translate-y-[-2px] relative overflow-hidden"
                 style={{ 
-                  background: 'linear-gradient(135deg, #00ADB5, #009DA5)',
+                  background: 'linear-gradient(135deg, #461111, #A13333)',
                   color: '#EEEEEE',
                   fontFamily: "'Montserrat', sans-serif",
                   fontWeight: 600,
                 }}
               >
                 <span className="relative z-10">Book Reservation</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-sky-400 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#461111] to-[#A13333] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </button>
               
               <button 
                 onClick={() => setIsMenuModalOpen(true)}
-                className="w-full px-8 py-4 rounded-full text-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px] hover:bg-sky-500/10 border-2"
+                className="w-full px-8 py-4 rounded-full text-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-2px] hover:bg-[#461111]/10 border-2"
                 style={{ 
-                  borderColor: '#00ADB5',
-                  color: '#00ADB5',
+                  borderColor: '#A13333',
+                  color: '#A13333',
                   fontFamily: "'Montserrat', sans-serif",
                   fontWeight: 500
                 }}
@@ -138,9 +138,10 @@ const PizzeriaHome = () => {
             </motion.div>
 
             <motion.p 
-              className="mt-8 text-sm text-gray-400 italic tracking-wider"
+              className="mt-8 text-sm italic tracking-wider"
               variants={itemVariants}
               style={{
+                color: '#B3541E',
                 fontFamily: "'Cormorant Garamond', serif"
               }}
             >

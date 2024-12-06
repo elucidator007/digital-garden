@@ -42,13 +42,13 @@ const FoodTypeIcon = ({ isVeg }) => (
 );
 
 const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients = [] }) => (
-    <div className="mb-3 transition-all duration-300 ease-in-out"> {/* Reduced margin bottom */}
+    <div className="mb-3 transition-all duration-300 ease-in-out">
       <div className="flex justify-between items-start gap-2">
         <div className="flex-grow">
           <div className="flex items-center gap-2">
             <FoodTypeIcon isVeg={isVeg} />
             <h3 
-              className="text-base font-medium" // Reduced font size
+              className="text-base font-medium"
               style={{ 
                 fontFamily: FONTS.primary,
                 color: COLORS.primary
@@ -59,7 +59,7 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             {spicyLevel > 0 && <SpicyIndicator level={spicyLevel} />}
           </div>
           <p 
-            className="text-sm mt-0.5" // Reduced font size and margin
+            className="text-sm mt-0.5"
             style={{ 
               fontFamily: FONTS.secondary,
               color: COLORS.secondary
@@ -68,9 +68,9 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             {description}
           </p>
         </div>
-        <div className="flex items-start gap-3"> {/* Reduced gap */}
+        <div className="flex items-start gap-3">
           <span 
-            className="text-base" // Reduced font size
+            className="text-base"
             style={{ 
               fontFamily: FONTS.secondary,
               color: COLORS.accent
@@ -82,18 +82,18 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             <Tooltip>
               <TooltipTrigger asChild>
                 <button className="p-0.5 hover:bg-black/5 rounded-full transition-colors">
-                  <Info size={14} style={{ color: COLORS.secondary }} /> {/* Reduced icon size */}
+                  <Info size={14} style={{ color: COLORS.secondary }} />
                 </button>
               </TooltipTrigger>
               <TooltipContent 
-                className="p-2 max-w-xs" // Reduced padding
+                className="p-2 max-w-xs"
                 style={{ 
                   backgroundColor: COLORS.background,
                   border: `1px solid ${COLORS.border}`
                 }}
               >
                 <p 
-                  className="text-sm font-medium mb-0.5" // Reduced margin
+                  className="text-sm font-medium mb-0.5"
                   style={{ 
                     fontFamily: FONTS.text,
                     color: COLORS.primary
@@ -124,7 +124,7 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
     if (filteredItems.length === 0) return null;
   
     return (
-      <div className="mb-6 transition-all duration-300 ease-in-out"> {/* Added transition */}
+      <div className="mb-6 transition-all duration-300 ease-in-out">
         <div className="relative mb-4">
           <h2 
             className="text-xl mb-2"
@@ -153,11 +153,11 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             />
           </div>
         </div>
-        <div className="grid transition-all duration-300 ease-in-out"> {/* Added grid and transition */}
+        <div className="grid transition-all duration-300 ease-in-out">
           {filteredItems.map((item, index) => (
             <div 
               key={index}
-              className="transition-all duration-300 ease-in-out opacity-100" // Added transition
+              className="transition-all duration-300 ease-in-out opacity-100"
               style={{
                 animation: 'fadeIn 300ms ease-in-out'
               }}
@@ -176,15 +176,15 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent 
-        className="max-w-[1200px] p-6 transition-all duration-300 ease-in-out" // Added transition
+        className="max-w-[1200px] p-6 transition-all duration-300 ease-in-out"
         style={{ 
             backgroundColor: showVegOnly ? COLORS.vegBackground : COLORS.background
         }}
         >
-          <DialogHeader className="mb-4"> {/* Reduced margin */}
+          <DialogHeader className="mb-4">
             <div className="flex justify-between items-center">
               <DialogTitle 
-                className="text-3xl font-light" // Reduced font size
+                className="text-3xl font-light"
                 style={{ 
                   fontFamily: FONTS.primary,
                   color: COLORS.primary
@@ -208,9 +208,9 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             </div>
           </DialogHeader>
           
-          <div className="grid grid-cols-2 gap-8"> {/* Reduced gap */}
+          <div className="grid grid-cols-2 gap-8">
             {/* Left Column */}
-            <div className="border-r pr-6" style={{ borderColor: COLORS.border }}> {/* Reduced padding */}
+            <div className="border-r pr-6" style={{ borderColor: COLORS.border }}>
               <MenuSection 
                 title="Appetizers" 
                 items={menuData.appetizers}
@@ -224,7 +224,7 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             </div>
   
             {/* Right Column */}
-            <div className="pl-6"> {/* Reduced padding */}
+            <div className="pl-6">
               <MenuSection 
                 title="Chef's Specials" 
                 items={menuData.chefsSpecials}
@@ -238,15 +238,15 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
             </div>
           </div>
   
-          <div className="flex flex-col items-center gap-2 mt-4 pt-4 border-t" style={{ borderColor: COLORS.border }}> {/* Reduced margins and gap */}
+          <div className="flex flex-col items-center gap-2 mt-4 pt-4 border-t" style={{ borderColor: COLORS.border }}>
             <div 
-              className="flex items-center justify-center gap-6" // Reduced gap
+              className="flex items-center justify-center gap-6"
               style={{ 
                 fontFamily: FONTS.text,
                 color: COLORS.secondary
               }}
             >
-              <span className="flex items-center gap-1.5"> {/* Reduced gap */}
+              <span className="flex items-center gap-1.5">
                 <Icon path={mdiSquareCircle} size={0.6} className="text-green-600" />
                 Vegetarian
               </span>
@@ -264,7 +264,7 @@ const MenuItem = ({ name, description, price, isVeg, spicyLevel = 0, ingredients
               </span>
             </div>
             <p 
-              className="text-xs" // Reduced font size
+              className="text-xs"
               style={{ 
                 fontFamily: FONTS.text,
                 color: COLORS.secondary

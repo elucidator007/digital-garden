@@ -160,11 +160,11 @@ const BookingModal = ({ open, onOpenChange }) => {
             className="text-center py-12 px-6"
           >
             <div className="mb-8">
-              <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#00ADB5] border-t-transparent mx-auto"></div>
+              <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#461111] border-t-transparent mx-auto"></div>
             </div>
             <motion.h3 
               className="text-2xl font-light mb-3" 
-              style={{ fontFamily: "'Playfair Display', serif", color: '#222831' }}
+              style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -196,7 +196,7 @@ const BookingModal = ({ open, onOpenChange }) => {
               animate={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
             >
-              <div className="w-16 h-16 bg-[#00ADB5] rounded-full mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#461111] rounded-full mx-auto flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                 </svg>
@@ -204,7 +204,7 @@ const BookingModal = ({ open, onOpenChange }) => {
             </motion.div>
             <motion.h3 
               className="text-2xl font-light mb-3" 
-              style={{ fontFamily: "'Playfair Display', serif", color: '#222831' }}
+              style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -236,7 +236,7 @@ const BookingModal = ({ open, onOpenChange }) => {
                 >
                   <label 
                     className="block text-sm font-medium mb-2"
-                    style={{ fontFamily: "'Montserrat', sans-serif", color: '#222831' }}
+                    style={{ fontFamily: "'Montserrat', sans-serif", color: '#040303' }}
                   >
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </label>
@@ -249,8 +249,8 @@ const BookingModal = ({ open, onOpenChange }) => {
                       onFocus={(e) => createRipple(e, field)}
                       className={`
                         w-full px-4 py-2 rounded-lg border-2 transition-all duration-200
-                        focus:outline-none focus:ring-2 focus:ring-[#00ADB5]/20
-                        ${errors[field] && touched[field] ? 'border-red-500 animate-shake' : 'border-gray-200 focus:border-[#00ADB5]'}
+                        focus:outline-none focus:ring-2 focus:ring-[#A13333]/20
+                        ${errors[field] && touched[field] ? 'border-red-500 animate-shake' : 'border-gray-200 focus:border-[#461111]'}
                       `}
                     />
                     {ripples[field] && (
@@ -258,7 +258,7 @@ const BookingModal = ({ open, onOpenChange }) => {
                         initial={{ scale: 0, opacity: 0.5 }}
                         animate={{ scale: 2, opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="absolute bg-[#00ADB5]/20 w-12 h-12 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                        className="absolute bg-[#A13333]/20 w-12 h-12 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                         style={{
                           left: ripples[field].x,
                           top: ripples[field].y,
@@ -291,7 +291,7 @@ const BookingModal = ({ open, onOpenChange }) => {
             >
               <label 
                 className="block text-sm font-medium mb-2"
-                style={{ fontFamily: "'Montserrat', sans-serif", color: '#222831' }}
+                style={{ fontFamily: "'Montserrat', sans-serif", color: '#040303' }}
               >
                 Number of Guests
               </label>
@@ -301,7 +301,7 @@ const BookingModal = ({ open, onOpenChange }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleGuestChange(-1)}
-                  className="w-12 h-12 rounded-full bg-[#00ADB5] text-white flex items-center justify-center text-2xl disabled:opacity-50"
+                  className="w-12 h-12 rounded-full bg-[#461111] text-white flex items-center justify-center text-2xl disabled:opacity-50"
                   disabled={formData.guests <= 1}
                 >
                   -
@@ -312,7 +312,7 @@ const BookingModal = ({ open, onOpenChange }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => handleGuestChange(1)}
-                  className="w-12 h-12 rounded-full bg-[#00ADB5] text-white flex items-center justify-center text-2xl disabled:opacity-50"
+                  className="w-12 h-12 rounded-full bg-[#461111] text-white flex items-center justify-center text-2xl disabled:opacity-50"
                   disabled={formData.guests >= 8}
                 >
                   +
@@ -322,7 +322,7 @@ const BookingModal = ({ open, onOpenChange }) => {
 
             <motion.button
               type="submit"
-              className="w-full px-8 py-4 rounded-full text-lg bg-[#00ADB5] text-white transition-all duration-300"
+              className="w-full px-8 py-4 rounded-full text-lg bg-[#461111] text-white transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -341,12 +341,12 @@ const BookingModal = ({ open, onOpenChange }) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="bg-white"
+          className="bg-[#E4C59E]"
         >
           <DialogHeader className="p-6 pb-0">
             <DialogTitle 
               className="text-3xl font-light mb-4 text-center" 
-              style={{ fontFamily: "'Playfair Display', serif", color: '#222831' }}
+              style={{ fontFamily: "'Playfair Display', serif", color: '#040303' }}
             >
               Reserve Your Table
             </DialogTitle>
@@ -354,7 +354,7 @@ const BookingModal = ({ open, onOpenChange }) => {
 
           {bookingStatus === 'form' && (
             <motion.div 
-              className="h-1 bg-[#00ADB5]"
+              className="h-1 bg-[#461111]"
               initial={{ width: 0 }}
               animate={{ width: `${completionPercentage}%` }}
               transition={{ duration: 0.5 }}

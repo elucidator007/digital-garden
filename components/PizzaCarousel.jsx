@@ -43,7 +43,6 @@ const PizzaCarousel = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  // Auto-advance slides - increased to 4000ms (4 seconds)
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
