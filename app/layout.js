@@ -20,6 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+        <head>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500&family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+        </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
